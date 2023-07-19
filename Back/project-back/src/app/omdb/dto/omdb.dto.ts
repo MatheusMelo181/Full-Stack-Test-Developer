@@ -1,13 +1,19 @@
 export class OmdbDTO {
   title: string;
+
   actors: string;
+
   poster: string;
+
   plot: string;
 
   constructor(attrs?: {
     title: string;
+
     actors: string;
+
     poster: string;
+
     plot: string;
   }) {
     if (attrs) {

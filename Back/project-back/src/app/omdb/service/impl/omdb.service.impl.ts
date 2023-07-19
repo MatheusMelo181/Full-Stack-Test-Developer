@@ -12,9 +12,11 @@ export class OmdbServiceImpl implements OmdbService {
 
   async findOmdbyTitle(title: string) {
     const movieUrl = this.API_URL + title;
+
     const { data } = await firstValueFrom(
       this.httpService.get<OmdbDTO>(movieUrl),
     );
+
     const dto: OmdbDTO = await this.jsonToDTO(data);
 
     return dto;
@@ -26,6 +28,7 @@ export class OmdbServiceImpl implements OmdbService {
     dto.title = data.Title;
     dto.actors = data.Actors;
     dto.plot = data.Plot;
+    dto.poster = data.Poster;
 
     return dto;
   }
