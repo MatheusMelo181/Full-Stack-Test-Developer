@@ -1,10 +1,11 @@
 import "./App.css";
 
-const App = () => {
+import Body from "./components/body"
+
+export default function App() {
   return (
     <div>
+      <Body/>
     </div>
   );
-};
-
-export default App;
+}
