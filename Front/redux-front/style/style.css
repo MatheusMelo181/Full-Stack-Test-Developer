@@ -1,0 +1,44 @@
+body {
+  width: 100%;
+}
+
+.tituloFilmePrincipal {
+  text-align: center;
+}
+
+#divBusca {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#divBusca #txtBusca {
+  margin: 0px 15px;
+  width: 300px;
+  border: 2px solid gray;
+  padding: 0px 10px;
+}
+
+#divBusca #btnSearch, #btnReset {
+  margin: 0px 15px;
+  padding: 10px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 9rem;
+}
+
+.descriptionMovie {
+  width: 1000px;
+  margin: auto;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 300px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */

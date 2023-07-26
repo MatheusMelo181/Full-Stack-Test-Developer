@@ -1,11 +1,11 @@
-import "./App.css";
+import "../style/style.css";
 
-import Body from "./components/body"
+import Card from "./components/card"
 
 export default function App() {
   return (
     <div>
-      <Body/>
+      <Card/>
     </div>
   );
 }
