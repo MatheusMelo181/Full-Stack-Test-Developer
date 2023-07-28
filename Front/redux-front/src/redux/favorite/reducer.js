@@ -6,11 +6,15 @@ const initialState = {
 
 const favoriteReducer = (state = initialState, action) => {
     if(action.type == FavoriteActionTypes.FAVORITE){
-        return { ...state, favoriteState: true };
+        const newState = {...state}
+        newState.favoriteState = !newState.favoriteState;
+        return newState;
     }
 
     if(action.type == FavoriteActionTypes.DISFAVOR){
-        return { ...state, favoriteState: false };
+        const newState = {...state}
+        newState.favoriteState = !newState.favoriteState;
+        return newState;
     }
 
     return state

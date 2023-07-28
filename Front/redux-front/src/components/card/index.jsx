@@ -7,10 +7,11 @@ import rootReducer from '../../redux/root-reducer';
 import FavoriteActionTypes from "../../redux/favorite/action-types";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 
-function Card() {
+export default function Folder() {
     const [search, setSearch] = useState('')
     const [movie, setMovie] = useState({})
     const { favoriteState } = useSelector(rootReducer => rootReducer.favoriteReducer)
+    //const { favoriteState } = useSelector((state) => state.favoriteReducer.favoriteState)
     const dispatch = useDispatch()
 
     function reset() {
@@ -27,12 +28,14 @@ function Card() {
         dispatch({
             type: FavoriteActionTypes.FAVORITE,
         })
+        console.log(favoriteState)
     }
 
     const handleDisfavorClick = () => {
         dispatch({
             type: FavoriteActionTypes.DISFAVOR,
         })
+        console.log(favoriteState)
     }
 
     return (
@@ -101,5 +104,3 @@ function Card() {
         </ThemeProvider>
     )
 }
-
-export default Card;
